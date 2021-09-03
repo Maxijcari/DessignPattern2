@@ -1,6 +1,7 @@
 ﻿
 using DessignPattern.Models;
 using DessignPattern.RepositoryPattern;
+using DessignPattern.StrategyPattern;
 using DessignPattern.UnitOfWorkPattern;
 using System;
 using System.Linq;
@@ -11,33 +12,19 @@ namespace DessignPattern
     {
         static void Main(string[] args)
         {
-            using (var context = new DesignPatternsContext())
-            {
-                //USANDO UNITOFWORK
+            //USANDO STRATEGY
+            //Se comporta como un AUTO
+            var context = new Context(new CarStrategy());
+            context.Run();
+            Console.WriteLine("Cambio de Vehiculo");
+            //Se comporta como una MOTO
+            context.Strategy = new MotoStrategy();
+            context.Run();
 
-                var unitOfWork = new UnitOfWork(context);
-                
-                var beers = unitOfWork.Beers;
+            //Se comporta como un Bicicleta
+            context.Strategy = new BicycleStrategy();
+            context.Run();
 
-                var beer = new Beer()
-                {
-                    Name = "Corona",
-                    Style = "Rubia"
-                };
-
-                beers.Add(beer);
-
-                var brands = unitOfWork.Brands;
-                var brand = new Brand()
-                {
-                    Name = "AGUILA"
-                };
-
-                brands.Add(brand);
-
-                unitOfWork.Save();
-
-            }
         }
     }
 }
