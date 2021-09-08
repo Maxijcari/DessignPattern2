@@ -1,4 +1,5 @@
 ﻿
+using DessignPattern.BuilderPattern;
 using DessignPattern.Models;
 using DessignPattern.RepositoryPattern;
 using DessignPattern.StrategyPattern;
@@ -12,19 +13,15 @@ namespace DessignPattern
     {
         static void Main(string[] args)
         {
-            //USANDO STRATEGY
-            //Se comporta como un AUTO
-            var context = new Context(new CarStrategy());
-            context.Run();
-            Console.WriteLine("Cambio de Vehiculo");
-            //Se comporta como una MOTO
-            context.Strategy = new MotoStrategy();
-            context.Run();
+            //USANDO BUILDER
+            //Preparando una margarita
 
-            //Se comporta como un Bicicleta
-            context.Strategy = new BicycleStrategy();
-            context.Run();
+            var builder = new PreparedAlcoholicDrinkConcreteBuilder();
+            var barmanDirector = new BarmanDirector(builder);
+            barmanDirector.PreparePinaColada();
+            var preparedDrink = builder.GetPreparedDrink();
 
+            Console.WriteLine(preparedDrink.Result);
         }
     }
 }
