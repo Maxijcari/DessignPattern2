@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DessignPattern", "DessignPattern.csproj", "{AF8F2EF1-79E7-499B-AC4A-6DBF7C2350D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Models", "..\DesignPatterns.Models\DesignPatterns.Models.csproj", "{987D08D0-A4C4-42CC-B304-279E89DB9FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Models", "..\DesignPatterns.Models\DesignPatterns.Models.csproj", "{987D08D0-A4C4-42CC-B304-279E89DB9FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesingPatterns.Repository", "..\DesingPatterns.Repository\DesingPatterns.Repository.csproj", "{DCBFF553-FB9C-4E7E-9BD4-7CA2FB1A5B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesingPatterns.Repository", "..\DesingPatterns.Repository\DesingPatterns.Repository.csproj", "{DCBFF553-FB9C-4E7E-9BD4-7CA2FB1A5B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsAsp", "..\DesignPatternsAsp\DesignPatternsAsp.csproj", "{777A003F-7F9F-4BC3-96E8-22D3DFBE1AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatternsAsp", "..\DesignPatternsAsp\DesignPatternsAsp.csproj", "{777A003F-7F9F-4BC3-96E8-22D3DFBE1AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "..\Tools\Tools.csproj", "{FF77581F-2EA7-4FD4-942B-85549005339A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{777A003F-7F9F-4BC3-96E8-22D3DFBE1AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{777A003F-7F9F-4BC3-96E8-22D3DFBE1AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{777A003F-7F9F-4BC3-96E8-22D3DFBE1AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF77581F-2EA7-4FD4-942B-85549005339A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF77581F-2EA7-4FD4-942B-85549005339A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF77581F-2EA7-4FD4-942B-85549005339A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF77581F-2EA7-4FD4-942B-85549005339A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
